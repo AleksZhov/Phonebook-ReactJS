@@ -1,0 +1,10 @@
+.filterContainer {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 350px;
+  padding: 20px;
+}
+
+.filterInput {
+  width: 90%;
+}

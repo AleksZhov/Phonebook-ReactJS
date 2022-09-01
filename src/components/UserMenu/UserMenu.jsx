@@ -1,9 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { logoutUser } from 'redux/authSlice';
+import { logoutUser, token } from 'redux/authSlice';
 const UserMenu = () => {
   const userEmail = useSelector(state => state.auth.user.email);
+  const tokenAuth = useSelector(state => state.auth.token);
   const dispatch = useDispatch();
   const onClickHandle = () => {
+    token.set(tokenAuth);
     dispatch(logoutUser());
   };
   return (

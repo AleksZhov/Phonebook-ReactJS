@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const token = {
+export const token = {
   set(token) {
     axios.defaults.headers.common['Authorization'] = token;
   },
@@ -42,7 +42,7 @@ export const logoutUser = createAsyncThunk(
   'user/logoutUser',
   async (_, thunkAPI) => {
     try {
-      const responce = await axios({
+      await axios({
         method: 'post',
         url: 'https://connections-api.herokuapp.com/users/logout',
       });

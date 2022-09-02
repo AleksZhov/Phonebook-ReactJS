@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser, token } from 'redux/authSlice';
+import { UserWrapperDiv, UserH2, Button } from './UserMenu.styled';
+
 const UserMenu = () => {
   const userEmail = useSelector(state => state.auth.user.email);
   const tokenAuth = useSelector(state => state.auth.token);
@@ -9,12 +11,12 @@ const UserMenu = () => {
     dispatch(logoutUser());
   };
   return (
-    <div>
-      <h2>{userEmail}</h2>
-      <button type="button" onClick={onClickHandle}>
+    <UserWrapperDiv>
+      <UserH2>{userEmail}</UserH2>
+      <Button type="button" onClick={onClickHandle}>
         Logout
-      </button>
-    </div>
+      </Button>
+    </UserWrapperDiv>
   );
 };
 export default UserMenu;

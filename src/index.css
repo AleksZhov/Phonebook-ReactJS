@@ -13,3 +13,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.background {
+  background-image: url('./images/school-supplies-3033204.jpg');
+  height: 100vh;
+  background-position: 50% 50%;
+}

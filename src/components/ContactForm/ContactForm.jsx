@@ -65,7 +65,9 @@ const ContactForm = () => {
           required
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button className="new-contact-btn" type="submit">
+        Add contact
+      </button>
     </form>
   );
 };

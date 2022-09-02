@@ -5,9 +5,9 @@ import ContactList from 'components/ContactList/ContactList';
 const Contacts = () => {
   return (
     <>
-      <h1>Phonebook</h1>
+      <h1>Add new contact</h1>
       <ContactForm />
-      <h2>Contacts</h2>
+
       <Filter />
       <ContactList />
     </>

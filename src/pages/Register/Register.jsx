@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { registerNewUser } from 'redux/authSlice';
 import { useDispatch } from 'react-redux';
+import { Form, Label, Button } from '../LogIn/Login.styled';
+
 const Register = () => {
   const dispatch = useDispatch();
   const [formFields, setFormFields] = useState({
@@ -20,8 +22,8 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <Form onSubmit={handleSubmit}>
+      <Label>
         Name
         <input
           type="text"
@@ -32,8 +34,8 @@ const Register = () => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-      </label>
-      <label>
+      </Label>
+      <Label>
         {' '}
         Email address
         <input
@@ -45,8 +47,8 @@ const Register = () => {
           min-length="6"
           required
         />
-      </label>
-      <label>
+      </Label>
+      <Label>
         {' '}
         Password
         <input
@@ -58,9 +60,9 @@ const Register = () => {
           min-length="8"
           required
         />
-      </label>
-      <button type="submit"> Register </button>
-    </form>
+      </Label>
+      <Button type="submit"> Register </Button>
+    </Form>
   );
 };
 

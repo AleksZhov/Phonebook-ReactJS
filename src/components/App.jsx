@@ -8,6 +8,7 @@ const Register = lazy(() => import('../pages/Register/Register'));
 const LogIn = lazy(() => import('../pages/LogIn/LogIn'));
 const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
 const Home = lazy(() => import('../pages/Home/Home'));
+const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
 
 const ContactsWithLoading = WithLoading(Contacts);
 const RegisterWithLoading = WithLoading(Register);
@@ -48,6 +49,7 @@ export const App = () => {
             }
           />
           {/* <Route path="/contacts" element={<PrivateRoute path="/contacts" />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </Suspense>

@@ -16,6 +16,7 @@ const LoginWithLoading = WithLoading(LogIn);
 
 export const App = () => {
   const isLoggedInFromStore = useSelector(state => state.auth.isLoggedIn);
+  const isRegisteredFromStore = useSelector(state => state.auth.isRegistered);
   return (
     <Suspense>
       <Routes>
@@ -25,8 +26,8 @@ export const App = () => {
             path="/register"
             element={
               <RegisterWithLoading
-                isLoggedIn={!isLoggedInFromStore}
-                navigateTo="/contacts"
+                isLoggedIn={!isRegisteredFromStore}
+                navigateTo="/login"
               />
             }
           />

@@ -5,6 +5,7 @@ import { Container, Header, NavLinkSt } from './SharedLayout.styled';
 
 export const SharedLayout = () => {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+
   return (
     <>
       <Container>

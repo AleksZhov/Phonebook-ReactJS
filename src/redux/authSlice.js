@@ -80,7 +80,6 @@ const authSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder.addCase(registerNewUser.fulfilled, (state, action) => {
-      console.log(action.payload);
       // state = { ...action.payload, isLoggedIn: true };
       state.isRegistered = true;
       token.set(action.payload.token);
@@ -101,7 +100,6 @@ const authSlice = createSlice({
     });
     builder.addCase(getUserData.fulfilled, (state, action) => {
       token.set(state.token);
-      console.log(action.payload);
       state.user = action.payload;
     });
   },
